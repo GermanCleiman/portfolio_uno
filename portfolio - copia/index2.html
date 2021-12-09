@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="card mat-card" id="first-card">
+        <div id="profile-background"><img src="https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-black-shading-red-shard-geometry-banner-background-shadingred-debrisred-glowgeometry-image_80184.jpg">
+        </div>
+        <div id="info" style="padding: 16px;">
+            <div id="info-img">
+                <img class="profile-image" id="fotoPersona" src= "./assets/Manuel Sadosky.jpg" alt="Foto"></img>
+                <div class="btn-edit" onclick="cambiar_datos_encabezado()">
+                    <a href="#info-data" class="btn-right">
+                        <i class="fa fa-pencil" aria-hidden="true">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div id="info-data">
+                <div>
+                    <h1 id="nombre-port">Manuel Sadosky</h1>
+                    <div id="info-company">Informático en CONICET
+                    </div>
+                        <div id="info-contact">
+                            <span id="info-contacto">Buenos Aires (Argentina)</span>
+                            <span><a href="#">Información de contacto</a></span>
+                        </div>
+                        <div>
+                            <input id="edit-acercadeN" type="text" oninput="myFunctionN(this.value, 0)" style="display: none;" size="60" placeholder="Ingrese el Nombre completo">
+                            <input id="edit-acercadeD" type="text" oninput="myFunctionN(this.value, 1)" style="display: none;" size="60" placeholder="Ingrese el Cargo">
+                            <input id="edit-acercadeI" type="text" oninput="myFunctionN(this.value, 2)" style="display: none;" size="60" placeholder="Ingrese la información de contacto">
+                        </div>
+                </div>
+                    <ul id="info-details">
+                        <li><a href="#">
+                            <img src="https://convocatorias.conicet.gov.ar/wp-content/uploads/logo-CONICET_opt.png" alt="">
+                            <h2>CONICET</h2>
+                        </a></li>
+                        <li><a href="#">
+                            <img src="https://inerciacero.files.wordpress.com/2011/07/logo-uba.png" alt="">
+                            <h2>Universidad de Buenos Aires</h2>
+                        </a></li>
+                    </ul>
+            </div>
+            <div id="info-actions">
+                <button type="button" class="btn btn-primary">Tengo interes en</button>
+                <button type="button" class="btn btn-light" onclick="nuevaSeccion()">Añadir sección</button>
+                <button type="button" class="btn btn-light">Más</button>
+            </div>            
+        </div>
+    </div>
+
+    <div class="card mat-card" id="1">
+        <div class="card-titles">
+            <h2>Acerca de</h2>
+            <div class="btn-edit" onclick="cambiar_parrafo()"><!--"editar_acerca de"-->
+                <a href="#1" class="btn-right">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <p id="text-acercade">Matemático, Físico e Informático argentino considerado por muchos como el padre de la computación Argentina.</p>
+        </div>
+        <div>
+            <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display: none;" size="60">
+            <!--"oninpuy="escribir_acercade"-->
+        </div>
+    </div>
+    <input type="file" id="file1" onchange="showFile(this)">
+    
+    <div class="card mat-card"><div id="Nombre"></div></div>
+    <div class="card mat-card"><div id="Apellido"></div></div>
+    <div class="card mat-card"><div id="text-acercade1"></div></div>
+    <div class="card mat-card"><div id="Titulos"></div></div>
+    <input type="file" id="file1" onchange="showFile1(this)">
+
+    
+    <div class="card mat-card">
+        <div id="experience">
+            <div class="card-titles">
+                <h2>Experiencia</h2>
+                <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-plus"></i></a></div>
+            </div>
+        </div>
+        <ul class="items-list">
+            <li></li>
+        </ul>
+    
+    
+    </div>
+
+    <div class="card mat-card">
+        <div class="card-titles">
+            <h2>Aptitudes y validaciones</h2>
+            <button type="button" class="btn btn-light">Añadir una aptitud nueva</button>
+            <button type="button" class="btn btn-light">Hacer un test de aptitudes</button>
+            <div class="btn-edit"><a href="#" class="btn-right"><i class="fa-pen"></i></a></div>
+        </div>
+    </div>
+
+    <div class="card mat-card">
+        <div class="card-titles">
+            <h2>Logros</h2>
+            <div class="btn-edit"><a href="./assets/circle.svg" class="btn-right"><i class="fa fa-plus"></i></a></div>
+        </div>
+    </div>
+
+    <script src="./front.js"></script>
+    <script src="./objetos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/2002c18ee5.js"></script>
+
+</body>
+</html>
